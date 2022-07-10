@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<style>
+    ._hidden {
+        display: none;
+    }
+
+    section {
+        min-height: 620px;
+    }
+
+    section:nth-child(2n) {
+        background-color: #191c24;
+    }
+
+    section:nth-child(1),
+    section:nth-child(3n) {
+        background-color: #e6e6e6;
+    }
+
+    section:nth-child(2n) p,
+    section:nth-child(2n) h1 {
+        color: #e6e6e6;
+    }
+
+    section:nth-child(1) p,
+    section:nth-child(3n) p,
+    section:nth-child(3n) h1 {
+        color: #191c24;
+    }
+
+    .trilha {
+        position: relative;
+        left: 400px;
+        z-index: 0;
+        transition: all 1s ease;
+    }
+
+    .trilha div {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        margin: 5px;
+        border: solid 0px;
+        border-radius: 20px;
+        background-color: #191c24;
+    }
+
+    .trilha p {
+        color: #e6e6e6 !important;
+    }
+
+    .arrow {
+        position: relative;
+        height: 100%;
+        z-index: 10;
+        border: solid 0px;
+        border-radius: 50px;
+        background-color: #e6e6e6;
+    }
+
+    .arrow img {
+        width: 60px;
+    }
+
+    .next {
+        left: -400px;
+    }
+</style>
+
+<body style="overflow-x:hidden">
+    <div style="position:fixed; top:0; width:100%; background-color: #f50058;">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <img src="./imgs/logo2.svg" alt="">
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a style="color:#e6e6e6" href="./plataforma/plataforma.html" class="nav-link">Plataforma</a>
+                    </li>
+                    <li>
+                        <a style="color:#e6e6e6" href="#" class="nav-link">Quem somos</a>
+                    </li>
+                    <li>
+                        <a style="color:#e6e6e6" href="#" class="nav-link">Nossa missão</a>
+                    </li>
+                    <li>
+                        <a style="color:#e6e6e6" href="#" class="nav-link"> Contato</a>
+                    </li>
+                    <li>
+                        <div class="btn btn-success"><a style="color:#e6e6e6" href="#" class="nav-link"> Login</a></div>
+                    </li>
+                    <!--                 <li>
+                  <a style="color:#e6e6e6" href="#" class="nav-link"> Customers</a>
+                </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="d-flex justify-content-center align-items-center" style="margin-top: 50px;">
+        <div>
+            <img src="./imgs/logo1.svg" alt="">
+            <p class="p-3 fs-4">
+                < Seu futuro <br> comeca aqui >
+            </p>
+        </div>
+        <img src="./imgs/sec1.svg" alt="">
+    </section>
+    <section class="d-flex justify-content-center align-items-center">
+        <img src="./imgs/sec2.svg" alt="">
+        <div>
+            <h1>Um espaço de aprendizagem</h1>
+            <p class="p-3">Aqui, a quebrada vai poder se profissionalizar e manjar tudo sobre tecnologia de graça</p>
+        </div>
+    </section>
+    <section class="d-flex justify-content-center align-items-center">
+        <div>
+            <h1>Trampo garantido</h1>
+            <p class="p-3">6 meses garantidos de emprego para você aplicar seus conhecimentos na prática</p>
+        </div>
+        <img src="./imgs/sec3.svg" alt="">
+    </section>
+    <section>
+        <br>
+        <br>
+        <h2 class="p-3">É simples!</h2>
+        <p class="p-3">Seu rolê começa aqui >>></p>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="arrow" onclick="n_deslizar_trilha()" style="left: 80px;"><img src="./imgs/arrowR.svg" alt=""
+                    style=" transform: rotate(180deg);"></div>
+            <div id="trilha" class="trilha d-flex justify-content-center align-items-center">
+                <div class="single-services">
+                    <p>Inscreva-se</p>
+                    <p>e aguarde seu</p>
+                    <p>e-mail para o</p>
+                    <p>processo seletivo</p>
+                </div>
+                <div class="single-services">
+                    <p>Participe do</p>
+                    <p>processo seletivo</p>
+                    <p>e espere o resultado</p>
+                </div>
+                <div class="single-services">
+                    <p>Conectado com sucesso!</p>
+                    <p>Bora começar</p>
+                    <p>a programar?</p>
+                </div>
+                <div class="single-services">
+                    <p>Depois dos 9 meses,</p>
+                    <p>você começa o seu</p>
+                    <p>novo trampo</p>
+                </div>
+                <div class="single-services">
+                    <p>Construa experiência</p>
+                    <p>e dê um up no</p>
+                    <p>currículo</p>
+                </div>
+                <div class="single-services">
+                    <p>Livre pra voar!</p>
+                    <p>Parabéns, você se</p>
+                    <p>tornou um programador!</p>
+                </div>
+            </div>
+            <div class="arrow" onclick="y_deslizar_trilha()" style="left: -80px;"><img src="./imgs/arrowR.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+</body>
+
+<script>
+    function y_deslizar_trilha() {
+        trilha.classList.add('next');
+    }
+    function n_deslizar_trilha() {
+        trilha.classList.remove('next');
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</html>
